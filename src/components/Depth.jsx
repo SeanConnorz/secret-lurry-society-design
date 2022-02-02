@@ -1,4 +1,5 @@
 import "../styles/Depth.css";
+import Roadmap from "./Roadmap.jsx";
 
 export default function Depth() {
   window.addEventListener("scroll", () => {
@@ -15,8 +16,8 @@ export default function Depth() {
 
   return (
     <section className="flex flex-col items-center ">
-      <div className="h-[80rem] flex flex-col justify-around w-[80%] text-center text-white">
-        <div id="welcome" className="relative">
+      <div className="h-[100rem] flex flex-col justify-around w-[80%] text-white">
+        <div id="welcome" className="relative text-center">
           <h1 className="font-bold text-[2rem]">
             Welcome to the Secret Lurry Society
           </h1>
@@ -30,36 +31,7 @@ export default function Depth() {
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
-        <div className="chalkboard">
-          pure css chalkboard
-          <br />
-          <ol>
-            <li>only requires a html tag and div tag</li>
-            <li>
-              thanks to{" "}
-              <a
-                href="http://stackoverflow.com/a/19258938/1654250 "
-                title="Stackoverflow Link"
-                contenteditable="false"
-              >
-                RhinoWalrus
-              </a>{" "}
-              for his help :)
-            </li>
-            <li>
-              thanks to{" "}
-              <a
-                href="https://codepen.io/HugoGiraudel/pen/layxv"
-                title="CodePen Link"
-                contenteditable="false"
-              >
-                HugoGiraudel
-              </a>{" "}
-              for his awesome work :)
-            </li>
-          </ol>
-          <br />
-        </div>
+        <Roadmap />
       </div>
     </section>
   );
