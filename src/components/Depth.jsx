@@ -1,10 +1,12 @@
 import "../styles/Depth.css";
 import Roadmap from "./Roadmap.jsx";
 import Welcome from "./Welcome.jsx";
+import Rarities from "./Rarities.jsx";
 
 export default function Depth() {
   window.addEventListener("scroll", () => {
     const welcome = document.getElementById("welcome");
+    const uncommon = document.getElementById("uncommon");
     const value = window.scrollY;
     welcome.style.top = (value - 700) * -1 + "px";
     if (value < 700) {
@@ -16,11 +18,12 @@ export default function Depth() {
   });
 
   return (
-    <section className="flex flex-col items-center ">
-      <div className="h-[100rem] flex flex-col justify-around w-[80%] text-white">
+    <section className="flex flex-col items-center text-white">
+      <div className="h-[120rem] flex flex-col justify-around w-[80%]">
         <Welcome />
         <Roadmap />
       </div>
+      <Rarities />
     </section>
   );
 }
