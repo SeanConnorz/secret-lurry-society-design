@@ -170,7 +170,6 @@
   left: 0;
   right: 0;
   background: linear-gradient(rgb(137, 202, 255), rgb(18, 147, 253));
-  overflow: hidden;
   box-shadow: inset 0 1px 4px -3px white;
 }
 
@@ -213,7 +212,6 @@
   transform: scaleX(-1);
   box-shadow: 2px 0 0 green;
   border-color: green;
-  filter: drop-shadow(-1vmin 5vmin 0 green) drop-shadow(-80vmin 5vmin 0 green);
 }
 
 .grass-2 {
@@ -222,6 +220,17 @@
   height: 20vmin;
   bottom: -2vmin;
   transform: scaleX(-1);
+}
+
+.grass-3 {
+  height: 40vmin;
+  width: 10vmin;
+  border-radius: 0 60% 0 0/0 100% 0 0;
+  bottom: 0;
+  border-right: 5px solid green;
+  box-shadow: 1px 0 0 green;
+  filter: drop-shadow(-3.5vmin 10vmin 0 green)
+    drop-shadow(-4.5vmin 10vmin 0 green);
 }
 
 .sun {
@@ -242,7 +251,7 @@
   background: currentColor;
   transform-origin: bottom center;
   transform: rotate(4deg);
-  box-shadow: inset -1px 0 0 var(--s1), -6vmin 3vmin 0 0, 80vmin 0 0 0;
+  box-shadow: -6vmin 3vmin 0 0;
   -webkit-animation: verticalise 20s infinite;
   animation: verticalise 20s infinite;
 }
@@ -255,11 +264,32 @@
   transform: rotate(-2deg);
   -webkit-animation: verticalise-1 20s infinite;
   animation: verticalise-1 20s infinite;
-  box-shadow: inset -1px 0 0 var(--s1), 6vmin 13vmin 0 0 var(--s1),
-    80vmin 10vmin 0 0 var(--s1);
+  box-shadow: inset -1px 0 0 var(--s1), 6vmin 13vmin 0 0 var(--s1);
+}
+
+.reed-3 {
+  height: 40vmin;
+  width: 0.5vmin;
+  color: var(--s1);
+  background: currentColor;
+  transform-origin: bottom center;
+  transform: rotate(4deg);
+  -webkit-animation: verticalise 20s infinite;
+  animation: verticalise 20s infinite;
 }
 
 .reed:after {
+  content: "";
+  width: 1.5vmin;
+  height: 10vmin;
+  background: currentcolor;
+  border-radius: 0.75vmin;
+  top: 0;
+  left: -0.5vmin;
+  box-shadow: inherit;
+}
+
+.reed-3:after {
   content: "";
   width: 1.5vmin;
   height: 10vmin;
