@@ -1,0 +1,16 @@
+.enlarge {
+  transition: all 0.2s ease-in-out;
+}
+.enlarge:hover {
+  transform: scale(1.4);
+}
+
+.glowing-border {
+  border: 2px solid #dadada;
+}
+
+.glowing-border:focus {
+  outline: none;
+  border-color: red;
+  box-shadow: 10px 10px 10px red;
+}

@@ -8,6 +8,7 @@ module.exports = {
     "./src/components/Legendary.jsx",
     "./src/components/Exotic.jsx",
     "./src/components/Rarities.jsx",
+    "./src/components/Team.jsx",
     "./src/components/Depth.jsx",
     "./App.js",
   ],

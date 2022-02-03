@@ -2,7 +2,7 @@ import "../styles/Roadmap.css";
 
 export default function Roadmap() {
   return (
-    <div className="chalkboard h-[25rem]">
+    <div className="chalkboard h-[50rem]">
       Roadmap
       <br />
       <ol className="mt-[3rem]">

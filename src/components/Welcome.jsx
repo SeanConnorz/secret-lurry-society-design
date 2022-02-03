@@ -1,10 +1,10 @@
 export default function Welcome() {
   return (
     <div id="welcome" className="relative text-center">
-      <h1 className="font-bold text-[2rem]">
+      <h1 className="font-bold text-[4rem]">
         Welcome to the Secret Lurry Society
       </h1>
-      <p>
+      <p className="text-[1.8rem]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
