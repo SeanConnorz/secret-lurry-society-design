@@ -5,14 +5,16 @@ export default function Team() {
   const [connor, setConnor] = useState();
   const [iouri, setIouri] = useState();
   const [tobias, setTobias] = useState();
+  const [amber, setAmber] = useState();
 
-  const red = "border-solid border-2 border-red-600 shadow-2xl shadow-red-600";
+  const red =
+    "border-solid border-[4px] border-red-600 shadow-2xl shadow-red-600";
 
   const yellow =
-    "border-solid border-2 border-yellow-600 shadow-2xl shadow-yellow-600";
+    "border-solid border-[4px] border-yellow-600 shadow-2xl shadow-yellow-600";
 
   const purple =
-    "border-solid border-2 border-purple-600 shadow-2xl shadow-purple-600";
+    "border-solid border-[4px] border-purple-600 shadow-2xl shadow-purple-600";
 
   const determineHover = (array, color) => {
     array.forEach((obj) => {
@@ -32,24 +34,20 @@ export default function Team() {
         ],
         purple
       );
+      setAmber(" ");
+      setIouri(" ");
     });
     marketing.addEventListener("mouseover", () => {
-      determineHover(
-        [
-          { state: connor, setState: setConnor },
-          { state: tobias, setState: setTobias },
-        ],
-        purple
-      );
+      determineHover([{ state: iouri, setState: setIouri }], yellow);
+      setAmber(" ");
+      setConnor(" ");
+      setTobias(" ");
     });
     artist.addEventListener("mouseover", () => {
-      determineHover(
-        [
-          { state: connor, setState: setConnor },
-          { state: tobias, setState: setTobias },
-        ],
-        purple
-      );
+      determineHover([{ state: amber, setState: setAmber }], red);
+      setIouri(" ");
+      setConnor(" ");
+      setTobias(" ");
     });
   }, []);
 
@@ -73,7 +71,8 @@ export default function Team() {
           src="https://www.artnews.com/wp-content/uploads/2021/08/BAYC-8746.png?w=631"
         ></img>
         <img
-          className="rounded-full object-contain w-[20rem] shadow-2xl"
+          id="amber"
+          className={"rounded-full object-contain w-[20rem] " + amber}
           src="https://www.artnews.com/wp-content/uploads/2021/08/BAYC-8746.png?w=631"
         ></img>
       </div>
