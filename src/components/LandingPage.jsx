@@ -45,7 +45,7 @@ export default function LandingPage() {
         <div className="sun-container sun-container-reflection">
           <div className="sun"></div>
         </div>
-        <div className="flex justify-center absolute w-[20rem] h-[30rem] left-[75vw] bottom-[30vh] z-20 overflow-hidden">
+        <div className="flex justify-center absolute w-[20rem] h-[50rem] left-[75vw] bottom-[30vh] z-20 overflow-hidden">
           <div className="grass-3 relative bottom-0"></div>
           <div className="reed-3 relative bottom-0"></div>
         </div>

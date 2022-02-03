@@ -15,7 +15,6 @@ export default function Depth() {
     } else {
       welcome.style.opacity = 1 - (value - 1200) * (1 / 250);
     }
-    console.log(value);
   });
 
   return (
