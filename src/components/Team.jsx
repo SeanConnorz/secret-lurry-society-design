@@ -1,5 +1,5 @@
 import "../styles/Team.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Team() {
   const [connor, setConnor] = useState();
@@ -20,9 +20,10 @@ export default function Team() {
     });
   };
 
-  const developer = document.getElementById("developer");
-  console.log(developer);
-  if (developer) {
+  useEffect(() => {
+    const developer = document.getElementById("developer");
+    const marketing = document.getElementById("marketing");
+    const artist = document.getElementById("artist");
     developer.addEventListener("mouseover", () => {
       determineHover(
         [
@@ -32,7 +33,25 @@ export default function Team() {
         purple
       );
     });
-  }
+    marketing.addEventListener("mouseover", () => {
+      determineHover(
+        [
+          { state: connor, setState: setConnor },
+          { state: tobias, setState: setTobias },
+        ],
+        purple
+      );
+    });
+    artist.addEventListener("mouseover", () => {
+      determineHover(
+        [
+          { state: connor, setState: setConnor },
+          { state: tobias, setState: setTobias },
+        ],
+        purple
+      );
+    });
+  }, []);
 
   return (
     <section className="flex flex-col justify-around items-center w-[60%] h-[60rem]">
@@ -59,10 +78,15 @@ export default function Team() {
         ></img>
       </div>
       <div className="flex justify-around text-[2rem] w-[75%]">
-        <h1 className="cursor-pointer hover:text-yellow-500 enlarge">
+        <h1
+          id="marketing"
+          className="cursor-pointer hover:text-yellow-500 enlarge"
+        >
           Marketing
         </h1>
-        <h1 className="cursor-pointer hover:text-red-500 enlarge">Artist</h1>
+        <h1 id="artist" className="cursor-pointer hover:text-red-500 enlarge">
+          Artist
+        </h1>
         <h1
           id="developer"
           className="cursor-pointer hover:text-purple-500 enlarge"
