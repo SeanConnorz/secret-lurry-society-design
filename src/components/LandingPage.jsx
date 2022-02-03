@@ -45,18 +45,10 @@ export default function LandingPage() {
         <div className="sun-container sun-container-reflection">
           <div className="sun"></div>
         </div>
-        <div className="flex justify-center absolute w-[20rem] h-[50rem] left-[75vw] bottom-[30vh] z-20 overflow-hidden">
-          <div className="grass-3 relative bottom-0"></div>
-          <div className="reed-3 relative bottom-0"></div>
-        </div>
+        <div className="flex justify-center absolute w-[20rem] h-[50rem] left-[75vw] bottom-[30vh] z-20 overflow-hidden"></div>
         <div className="water">
           {trash}
-          <div className="front">
-            <div className="grass"></div>
-            <div className="reed reed-1"></div>
-            <div className="grass grass-1"></div>
-            <div className="reed"></div>
-          </div>
+          <div className="front"></div>
         </div>
         <div className="splash"></div>
         <div className="splash delay-1"></div>
